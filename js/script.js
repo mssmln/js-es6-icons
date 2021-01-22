@@ -6,13 +6,13 @@
 // Utilizzate forEach, map e filter e cercate di strutturare tutto con le funzioni.
 
 
-
-const icons = [
+$(document).ready(function() {
+  const icons = [
   {
-    name: 'cat',
-    prefix: 'fa-',
+    name: 'cat', // da fontawesome
+    prefix: 'fa-', // da fontawesome
     type: 'animal',
-    family: 'fas',
+    family: 'fas', // da fontawesome
   },
   {
     name: 'crow',
@@ -105,3 +105,35 @@ const icons = [
     family: 'fas',
   }
 ];
+  // array dei colori
+  const colors = [
+    'blue', // per il type animal
+    'orange', // per il type vegetable
+    'purple', // per il type user
+  ];
+
+  // filtriamo per estrarre il type animale, vegetale, utente
+  // se funziona trasformalo in una funzione e commentalo
+  // const types = [];
+  // icons.forEach((item) => {
+  //   if(!types.includes(item.type)){
+  //     types.push(item.type);
+  //   }
+  // });
+  // console.log(types);
+  const iconTypes = getTypes(icons); // funzione che rappresenta il codice sopra di essa
+  console.log(iconTypes); // non lasciando log nelle funzioni, inseriamo il risultato della fun in una const per verificare col log se è corretto
+
+});
+
+
+
+function getTypes(array) {
+  const types = [];
+  array.forEach((item) => {
+    if(!types.includes(item.type)){
+      types.push(item.type);
+    }
+  });
+  return types
+}
