@@ -121,18 +121,18 @@ $(document).ready(function() {
   //   }
   // });
   // console.log(types);
-  const iconTypes = getTypes(icons); // funzione che rappresenta il codice sopra di essa
+  const iconTypes = getTypes(icons,type); // funzione che rappresenta il codice sopra di essa
   console.log(iconTypes); // non lasciando log nelle funzioni, inseriamo il risultato della fun in una const per verificare col log se è corretto
 
 });
 
 
 
-function getTypes(array) {
+function getTypes(array,toFilter) {
   const types = [];
   array.forEach((item) => {
-    if(!types.includes(item.type)){
-      types.push(item.type);
+    if(!types.includes(item.toFilter)){
+      types.push(item.toFilter);
     }
   });
   return types
