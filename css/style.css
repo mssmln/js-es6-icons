@@ -11,6 +11,7 @@ body{
 .container{
   width: 100%; /* prova con 100vw alla fine */
   height: 100vh;
+  overflow: auto;
   background-color: lightgrey;
 }
 
